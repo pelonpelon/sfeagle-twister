@@ -1,1 +1,15 @@
 .sass-cache
+.htaccess
+wp/wp-config.php
+wp/wp-content/uploads/
+wp/wp-content/blogs.dir/
+wp/wp-content/upgrade/
+wp/wp-content/backup-db/
+wp/wp-content/advanced-cache.php
+wp/wp-content/wp-cache-config.php
+wp/sitemap.xml
+wp/*.log
+wp/wp-content/cache/
+wp/wp-content/backups/
+wp/sitemap.xml
+wp/sitemap.xml.gz
