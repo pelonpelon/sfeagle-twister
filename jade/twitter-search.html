@@ -1,0 +1,120 @@
+	<style type="text/css">
+		body {
+			background: #333333 url(concrete_wall.png);
+		}
+		.twtr-widget {
+			float: left;
+			width: 300px;
+			margin: 50px 0 0 80px;
+			padding: 0 0 15px;
+			background: #fafafa url(wavecut.png);
+			
+			/*** cross browser box shadow ***/
+			-moz-box-shadow: 0 0 2px #fff;
+			-webkit-box-shadow: 0 0 2px #fff;
+			-ms-filter: "progid:DXImageTransform.Microsoft.Glow(color=#ffffff,strength=3)";
+			filter:
+				progid:DXImageTransform.Microsoft.Shadow(color=#ffffff,direction=0,strength=3)
+				progid:DXImageTransform.Microsoft.Shadow(color=#ffffff,direction=90,strength=3)
+				progid:DXImageTransform.Microsoft.Shadow(color=#ffffff,direction=180,strength=3)
+				progid:DXImageTransform.Microsoft.Shadow(color=#ffffff,direction=270,strength=3);
+			box-shadow: 0 0 2px #fff;
+			
+			/*** kind of cross browser rounded corner ***/
+			-webkit-border-radius: 3px;
+			-khtml-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+		}
+			.twtr-hd {
+				/*** cross browser rgba ***/
+				background-color: transparent;
+				background-color: rgba(255,255,255,0.3);
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#30ffffff,endColorstr=#30ffffff);
+				-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#30ffffff,endColorstr=#30ffffff)";
+			}
+			.twtr-bd {}
+				.twtr-widget .twtr-bd .twtr-tweet {
+					margin: 5px 0 0;
+					padding: 0 0 5px;
+					border-bottom: 1px solid #cecece;
+				}
+				.twtr-tweet:before {
+					display: block;
+					float: left;
+					margin: -5px 0 0 5px;
+					font-size: 50px; /* let's make it a big quote! */
+					content: "“";
+					color: #bababa;
+					text-shadow: 0 1px 1px #909090;
+					font-family: "times new roman", serif;
+				}
+			.twtr-ft { display: none; }
+	</style>
+</head>
+<body>
+	<!-- first box -->
+	<script>
+	new TWTR.Widget({
+	  version: 2,
+	  type: 'profile',
+	  rpp: 4,
+	  interval: 6000,
+	  width: 300,
+	  height: 300,
+	  theme: {
+		shell: {
+		  background: 'transparent',
+		  color: '#333'
+		},
+		tweets: {
+		  background: 'transparent',
+		  color: '#333',
+		  links: '#c10000'
+		}
+	  },
+	  features: {
+		scrollbar: false,
+		loop: false,
+		live: false,
+		hashtags: true,
+		timestamp: true,
+		avatars: false,
+		behavior: 'all'
+	  }
+	}).render().setUser('1stwebdesigner').start();
+	</script>
+	<!-- second box -->
+	<script>
+	new TWTR.Widget({
+	  version: 2,
+	  type: 'search',
+	  search: 'from:dsgn_pro OR from:1stwebdesigner OR 1stwebdesigner OR 1wd',
+	  interval: 6000,
+	  title: 'What do they say about 1stWebdesigner',
+	  subject: '1WD related tweets',
+	  width: 300,
+	  height: 300,
+	  theme: {
+		shell: {
+		  background: 'transparent',
+		  color: '#333'
+		},
+		tweets: {
+		  background: 'transparent',
+		  color: '#333',
+		  links: '#c10000'
+		}
+	  },
+	  features: {
+		scrollbar: false,
+		loop: true,
+		live: true,
+		hashtags: true,
+		timestamp: true,
+		avatars: true,
+		toptweets: true,
+		behavior: 'default'
+	  }
+	}).render().start();
+	</script>
