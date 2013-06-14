@@ -1,0 +1,51 @@
+body {
+  background: #000000;
+  color: #ffffff;
+}
+.widgets, .tease, .events, .flyers, .footer {
+  width: 100%;
+  border: solid 1px red;
+}
+.row {
+  max-width: none;
+}
+.nav {
+  ul {
+    font-size: .8em;
+  }
+  li {
+    @extend .button;
+    background: #ff0000;
+    @include border-radius(15px, 15px);
+    border-color: #000000;
+    width: 23.8%;
+    height: 0;
+    padding: 3% 2% 20% 2%;
+  }
+}
+iframe#twitter-widget-0 {
+  background: #0000ff;
+  height: 120px !important;
+  z-index: -99;
+
+.footer.customisable-border {
+  background: #ffff00 !important;
+  display: none !important;
+  height: 0 !important;
+  visibility: hidden !important;
+  min-height: 0 !important;
+  border: solid 2px green;
+}
+.h-feed {
+  background: #ffff00 !important;
+  margin: 0 0 60px 0 !important;
+  padding: 0 0 60px 0 !important;
+  border: solid 2px green;
+}
+.load-more.customisable {
+  margin: 100px 0 0 0 !important;
+  display: none !important;
+  height: 0 !important;
+  visibility: hidden !important;
+  border: solid 2px green;
+}}
